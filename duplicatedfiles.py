@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 lista = []
 
-filesnames = [f for f in listdir('E:/2019-03') if isfile(join('E:/2019-03', f))]
+filesnames = [f for f in listdir('mypath') if isfile(join('mypath', f))]
 
 
 for x in range(len(filesnames)):
@@ -13,7 +13,7 @@ for x in range(len(filesnames)):
 
 
 for x in range(len(lista)):
-    file_path = f'E:/2019-03/{lista[x]}'
+    file_path = f'mypath/{lista[x]}'
     try:
         os.remove(file_path)
     except OSError as e:
